@@ -18,13 +18,13 @@ print(dayofweek)
 # weekday Monday is 0 and Sunday is 6
 print("weekday():", datetime.date(1996, 6, 17).weekday())
 # isoweekday() Monday is 1 and Sunday is 7
-print("isoweekday()", datetime.date(1996, 6, 17).isoweekday())
+print("isoweekday():", datetime.date(1996, 6, 17).isoweekday())
 print(' ')
 
 dayofweek = datetime.datetime.today().strftime("%A")
 print(dayofweek)
 print("weekday():", datetime.datetime.today().weekday())
-print("isoweekday()", datetime.datetime.today().isoweekday())
+print("isoweekday():", datetime.datetime.today().isoweekday())
 
 print(' ')
 thisDay = datetime.datetime.today()
