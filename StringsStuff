@@ -1,0 +1,11 @@
+#Print Keyword Arguments
+
+print('Hello', end='') #Instead of the default \n end of print string
+print('World')
+#the output would look like this:
+#HelloWorld
+
+
+print('cats', 'dogs', 'mice', sep=',') #Instead of the default ' ' between concatenated strings
+#the output would look like this:
+#cats,dogs,mice
