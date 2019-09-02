@@ -7,3 +7,8 @@ Very early in my programming career, I made a simple Rock Paper Scissors game in
 
 It could have been a quirk of VB, or the extremely locked down school computers, floating point rounding, literally anything; however, I need to ensure that random numbers in python ACTUALLY work as intended before relying on them.
 Does scaling up the range reduce the amount of user perceived rounding error? ie 0:2 vs 0:8 vs 0:98
+
+
+##########
+Answer: it works well enough for my purposes. reference <Success.jpg>
+##########
