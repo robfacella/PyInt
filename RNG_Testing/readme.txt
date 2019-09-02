@@ -10,5 +10,5 @@ Does scaling up the range reduce the amount of user perceived rounding error? ie
 
 
 ##########
-Answer: it works well enough for my purposes. reference <Success.jpg>
+Answer: Python random.randint() works well enough for my purposes. reference <Success.jpg>
 ##########
