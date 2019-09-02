@@ -1,28 +1,17 @@
 import random
 
-#Cobbled together in a mobile notepad interface while drinking my morning coffee at work.
+#Starting Sample Size
 sampleSize = int(input('Enter a sample size: '))
-
-while sampleSize != 0:
-
-    case1 = 0
-    case2 = 0
-    case3 = 0
-
-    for i in range (0, sampleSize):
-
-        randNum = random.randint(0,2) #need 0 AND upperbound divisible by 3, otherwise case 3 is only hit when number is EXACTLY 3
-#OR the randoms are only ints and 0,2 would work
-
+while sampleSize != 0: #runs until user enters 0
+    case = [0, 0, 0]
+    for i in range (0, sampleSize): #Runs from 0 to sampleSize-1 (Therefore sampleSize Times)
+        randNum = random.randint(0,2) #Chooses random integer {0, 1, or 2}
         if randNum < 1:
-               case1 += 1
+               case[0] += 1 #if zero counter
         elif randNum < 2:
-               case2 += 1
+               case[1] += 1 #if one counter
         else:
-               case3 += 1
-
-    print ("Chose case1 ", (case1/sampleSize*100), "% of the time.", sep='')
-    print ("Chose case2 ", (case2/sampleSize*100), "% of the time.", sep='')
-    print ("Chose case3 ", (case3/sampleSize*100), "% of the time.", sep='')
-
-    sampleSize = int(input('Enter a new sample size OR 0 to quit: '))
+               case[2] += 1 #if two counter
+    for j in range (0, len(case)): #iterate over list and print how often each case was hit.
+        print ("Chose case ", (j + 1), " ", (case[j]/sampleSize*100), "% of the time.", sep='')
+    sampleSize = int(input('Enter a new sample size OR 0 to quit: ')) #Run again or exit with 0
