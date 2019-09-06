@@ -7,7 +7,12 @@ import os
 #### Randomly capitalize/lowercase letters
 #### Random 1337-speak
 #Reassemble and Output to a New Output file
-os.chdir('..') 
-print (os.getcwd())
-print (os.path.join('Input', 'in.txt'))
-print(os.path.join('Output', 'out.txt'))
+#os.chdir('..') #bash-like, this DOES work
+#print (os.getcwd()) #get Current Working Dir
+
+#print(os.path.join('Output', 'out.txt'))
+
+inFile = open(os.path.join('Input', 'in.txt'))
+print ('Opened', os.path.join('Input', 'in.txt'), ' as inFile.')
+
+print(inFile.readlines())
