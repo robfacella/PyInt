@@ -7,5 +7,7 @@ import os
 #### Randomly capitalize/lowercase letters
 #### Random 1337-speak
 #Reassemble and Output to a New Output file
+os.chdir('..') 
+print (os.getcwd())
 print (os.path.join('Input', 'in.txt'))
 print(os.path.join('Output', 'out.txt'))
