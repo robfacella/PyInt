@@ -4,17 +4,16 @@ import os
 #Read each line of a file
 #split line to strings
 #CharByChar : Substring
+##Remove Special Char {'\n' and others}
 #### Randomly capitalize/lowercase letters
 #### Random 1337-speak
+##Add Special Char(s) back in.
 #Reassemble and Output to a New Output file
+
 #os.chdir('..') #bash-like, this DOES work
 #print (os.getcwd()) #get Current Working Dir
-
-
-
 inFile = open(os.path.join('Input', 'in.txt'))
 print ('Opened', os.path.join('Input', 'in.txt'), ' as inFile.txt')
-
 #print(inFile.readlines()) #Print List of all Lines in the File. \n as line separator.
 #print(inFile.readlines()) #Need to close and ReOpen to read again. Or move Read Pointer in another way.
 
@@ -22,9 +21,10 @@ outFile = open(os.path.join('Output', 'out.txt'), 'w')
 print('Opened', os.path.join('Output', 'out.txt'), ' as outFile.txt for writing')
 
 lines = inFile.readlines()
+#print(lines)
 
 #To copy in.txt to out.txt
-#Should open outFile for 'w'rite for the first line, and then 'a'ppend the rest of the lines.
+####Should open outFile for 'w'rite for the first line, and then 'a'ppend the rest of the lines.
 #Or do separate writes just work provided the writer doesn't close and reopen... #<- Yes, this one.
 for line in lines:
     outFile.write(line)
