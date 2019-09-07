@@ -9,7 +9,13 @@ import os
 #### Random 1337-speak
 ##Add Special Char(s) back in.
 #Reassemble and Output to a New Output file
-
+def charManip(word):
+    print(word)
+    return word
+def wordsFromLine(line):
+    wordList = line.split(" ")
+    #print(wordList)
+    return wordList #Takes a line of text and splits words on spaces.
 #os.chdir('..') #bash-like, this DOES work
 #print (os.getcwd()) #get Current Working Dir
 inFile = open(os.path.join('Input', 'in.txt'))
@@ -28,6 +34,8 @@ lines = inFile.readlines()
 #Or do separate writes just work provided the writer doesn't close and reopen... #<- Yes, this one.
 for line in lines:
     outFile.write(line)
+    for word in wordsFromLine(line):
+        charManip(word)
 print('Copied', os.path.join('Input', 'in.txt'), 'to', os.path.join('Output', 'out.txt'),'!!')
 inFile.close()
 outFile.close()
