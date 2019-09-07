@@ -1,6 +1,6 @@
-This is a Test
-import file
-just
-Because.. And
-"it's totally WorkING"
-as Expected
+ THIS IS A TESt
+ impOrt fILe
+ jUSt
+ BECAUse.. aND
+ "IT'S TOTaLLy WORking"
+ aS ExPeCted

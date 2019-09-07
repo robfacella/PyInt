@@ -43,11 +43,14 @@ lines = inFile.readlines()
 ####Should open outFile for 'w'rite for the first line, and then 'a'ppend the rest of the lines.
 #Or do separate writes just work provided the writer doesn't close and reopen... #<- Yes, this one.
 for line in lines:
-    outFile.write(line)
+    newLine = ''
     for word in wordsFromLine(line):
         word = charManip(word)
-        print (word)
-print('Copied', os.path.join('Input', 'in.txt'), 'to', os.path.join('Output', 'out.txt'),'!!')
+        newLine += ' '
+        newLine += word
+    outFile.write(newLine)
+
+print('Copied the modified', os.path.join('Input', 'in.txt'), 'to', os.path.join('Output', 'out.txt'),'!!')
 inFile.close()
 outFile.close()
 print('Closed inFile and outFile')
