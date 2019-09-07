@@ -1,5 +1,5 @@
 import os
-
+import random
 #Windows && Unix FileSystem Support
 #Read each line of a file
 #split line to strings
@@ -10,8 +10,18 @@ import os
 ##Add Special Char(s) back in.
 #Reassemble and Output to a New Output file
 def charManip(word):
-    print(word)
-    return word
+    #x = 0
+    newWord = '' #could/should just modify word as a substring
+    for charmander in word:
+        if charmander.isalpha() :
+            r = random.randint(1, 2)    #Randomly changes the case of all Alphabetical char in the word string
+            if r == 1 :
+                charmander = charmander.upper()
+            else:
+                charmander = charmander.lower()
+        newWord += charmander #reassembles string as newWord
+        #x += 1  #print(x, 'characters in', word) #Counts "\n" as one char
+    return newWord #return newWord
 def wordsFromLine(line):
     wordList = line.split(" ")
     #print(wordList)
@@ -35,7 +45,8 @@ lines = inFile.readlines()
 for line in lines:
     outFile.write(line)
     for word in wordsFromLine(line):
-        charManip(word)
+        word = charManip(word)
+        print (word)
 print('Copied', os.path.join('Input', 'in.txt'), 'to', os.path.join('Output', 'out.txt'),'!!')
 inFile.close()
 outFile.close()
