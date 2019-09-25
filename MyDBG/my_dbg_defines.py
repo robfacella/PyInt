@@ -11,7 +11,7 @@ HANDLE = c_void_p
 DEBUG_PROCESS = 0x00000001
 CREATE_NEW_CONSOLE = 0x00000010
 
-#Structures for CreateProcessA() function
+#Structures for CreateProcessW() function
 class STARTUPINFO(Structure):
     _fields_ = [
       ("cb", DWORD),

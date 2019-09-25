@@ -25,16 +25,7 @@ class debugger():
         #Then initialize the cb var in the STARTUPINFO struct which is the size of the struct itself
         startupinfo.cb = sizeof(startupinfo)
 
-        if kernel32.CreateProcessA(path_to_exe,
-                                None,
-                                None,
-                                None,
-                                None,
-                                creation_flags,
-                                None,
-                                None,
-                                byref(startupinfo),
-                                byref(process_information)):
+        if kernel32.CreateProcessW(path_to_exe, None, None, None, None, creation_flags, None, None, byref(startupinfo), byref(process_information)):
             print("[*] We have successfully launched the process!")
             print("[*] PID: %d" % process_information.dwProcessId)
         else:
